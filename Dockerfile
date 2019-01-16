@@ -1,6 +1,6 @@
 FROM ruby:2.6.0
 
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs sqlite3
 WORKDIR /app
 RUN gem install hanami
 ADD Gemfile /app/Gemfile

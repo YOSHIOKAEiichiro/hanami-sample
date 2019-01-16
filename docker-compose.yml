@@ -1,10 +1,23 @@
 version: "3"
 services:
-  app:
+  dev:
     build:
       context: .
       dockerfile: ./Dockerfile
     command: "bundle exec hanami server --host 0.0.0.0 -p 2300"
+    environment:
+      - HANAMI_ENV=development
+    volumes:
+      - .:/app
+    ports:
+      - 2300:2300
+  test:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: "bundle exec hanami server --host 0.0.0.0 -p 2300"
+    environment:
+      - HANAMI_ENV=test
     volumes:
       - .:/app
     ports:
