@@ -20,5 +20,3 @@ services:
       - HANAMI_ENV=test
     volumes:
       - .:/app
-    ports:
-      - 2300:2301
