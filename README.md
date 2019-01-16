@@ -1,4 +1,4 @@
-# Hanami Sample
+# Bookshelf
 
 Welcome to your new Hanami project!
 
